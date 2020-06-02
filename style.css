@@ -1,16 +1,150 @@
 /* Type your code here */
 
-
 /* change the font family and spacing as per your project font */
-.footer{
-    display:flex;
-    flex-direction: row;
-    align-content: flex-end;
-	position: relative;
-	top: 750px;
-	margin-left: 80px;
+
+body {
+	font-family: 'Nunito Sans', sans-serif;
+}
+
+.container {
+	max-width: 1140px;
+	margin: 0 auto;
+	height: 100vh;
+}
+
+.bg-hero {
+	background: url(./assets/background-image1.png) no-repeat;
+	background-position: bottom right;
+}
+
+table tr {
+	background-color: white;
+}
+
+.logo {
+	display: flex;
+	justify-content: flex-end;
+	padding-top: 20px;
+	padding-right: 50px;
+}
+
+.match-title {
+	font-size: 40px;
+	font-weight: bold;
+	text-shadow: 2px 2px 2px rgb(110, 110, 110);
+}
+
+.scoreCard-team {
 	font-size: 18px;
-	font-family: Nunito Sans;
-    font-style: normal;
-    
+	font-weight: bold;
+	color: gray;
+}
+
+.india-innings {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	padding-left: 10px;
+	padding-right: 13px;
+	color: white;
+	height: 35px;
+	width: 820px;
+	background-color: rgb(243, 79, 19);
+	margin-top: 30px;
+}
+
+table {
+	border-collapse: collapse;
+}
+
+th {
+	text-align: left;
+	padding: 7px;
+}
+
+tr {
+	border-bottom: 1px solid gray
+}
+
+td {
+	padding: 7px;
+}
+
+tr:nth-child(1) {
+	background-color: rgb(247, 247, 247);
+}
+
+td:nth-child(1) {
+	padding-right: 90px;
+	font-size: 16px;
+}
+
+td:nth-child(1) a {
+	text-decoration: none;
+	color: rgb(92, 128, 175);
+}
+
+td:nth-child(2) {
+	text-align: left;
+	padding-right: 90px;
+	color: gray;
+}
+
+.footer {
+	display: flex;
+	margin-top: 40px;
+}
+
+.footer img {
+	margin: 0 5px;
+}
+
+.player-popup a {
+	text-decoration: none;
+	color: rgb(92, 128, 175);
+}
+
+.overlay {
+	position: fixed;
+	top: 0;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	background: rgba(0, 0, 0, 0.7);
+	transition: opacity 500ms;
+	visibility: hidden;
+	opacity: 0;
+}
+
+.position {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	height: 100vh;
+}
+
+.overlay:target {
+	visibility: visible;
+	opacity: 1;
+}
+
+.popup {
+	width: 35%;
+	position: relative;
+	transition: all 0s ease-in-out;
+}
+
+.popup .close {
+	position: absolute;
+	top: 195px;
+	right: 15px;
+	transition: all 200ms;
+	font-size: 30px;
+	text-decoration: none;
+	color: white;
+}
+
+.popup .content {
+	max-height: 30%;
+	overflow: auto;
 }
